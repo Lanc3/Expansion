@@ -8,7 +8,8 @@ import UIImage2 from '../images/ui-project-2.jpg';
 import videoMindo from '../images/mindo-app-launch.mp4';
 import swarm from '../images/Swarm Wars Demo.mp4';
 import priceme from '../images/priceME.mp4'
-
+import expanse from '../images/the expanse game.mp4' //
+import driver from '../images/Argo Driver.mp4'
 export const projectsData = [
 	{
 		id: 1,
@@ -48,6 +49,20 @@ export const projectsData = [
 		category: 'Game Development',
 		img: UIImage2,
 		video:swarm,
+	},
+	{
+		id: 5,
+		title: 'The Expanse',
+		category: 'Game Development',
+		img: UIImage2,
+		video:expanse,
+	},
+	{
+		id: 5,
+		title: 'Argo Driver',
+		category: 'Game Development',
+		img: UIImage2,
+		video:driver,
 	},
 
 ];
