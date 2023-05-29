@@ -34,13 +34,12 @@ const Routes = () => {
             <Route path="/project-datas" page={ProjectDataProjectDatasPage} name="projectDatas" />
             <Route path="/client" page={ClientPage} name="client" />
             <Route path="/blog-admin" page={BlogAdminPage} name="blogAdmin" />
-            
+            <Route path="/signup" page={SignupPage} name="signup" />
           </Set>
         </Private>
       </Set>
       <Set wrap={HeaderFooterLayout}>
         <Private unauthenticated="home"></Private>
-        <Route path="/signup" page={SignupPage} name="signup" />
         <Route path="/contactus" page={ContactusPage} name="contactus" />
         <Route path="/" page={HomePage} name="home" />
         <Route path="/about" page={AboutPage} name="about" />
