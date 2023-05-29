@@ -28,7 +28,7 @@ const HeaderFooterLayout = ({ children }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         id="nav"
-        className="  "
+        className=" "
       >
         <div className="z-10 flex  py-6 shadow-lg sm:flex sm:items-center sm:justify-between ">
           <div className="mx-4">

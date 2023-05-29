@@ -16,7 +16,7 @@ const HomePage = () => {
   const [showModal, setShowModal] = useState(false)
 
   return (
-    <div className="mx-24 flex flex-col justify-center">
+    <div className="mx-4 sm:mx-4 md:mx-24 lg:mx-24 xl:mx-24 flex flex-col justify-center">
       <AppBanner></AppBanner>
 
       <ProjectCell></ProjectCell>

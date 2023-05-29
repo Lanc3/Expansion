@@ -33,13 +33,27 @@ const socialLinks = [
     url: 'https://www.youtube.com/@AaronKeatingLanc3/',
   },
 ]
+const nicolasLinks = [
+  {
+    id: 1,
+    icon: <FiGlobe />,
+    url: 'https://www.expansion.ie/',
+  },
+
+  {
+    id: 3,
+    icon: <FiLinkedin />,
+    url: 'https://www.linkedin.com/in/nicola-byrne-bb6377b3/',
+  },
+
+]
 const AppFooter = () => {
   return (
     <div className="container mx-auto ">
       <div className="sm:pt-30 mb-24 mt-20 flex flex-col items-center justify-center border-t-2 border-primary-light pb-8 pt-20 sm:flex-col md:flex-row lg:flex-row">
         {/* Footer social links */}
         <div className="font-general-regular mx-44 flex flex-col items-center justify-center sm:mx-44">
-          <p className="mb-5 text-3xl text-primary-dark  sm:text-4xl">
+          <p className="mb-5 text-3xl text-expansion-orange  sm:text-4xl whitespace-nowrap">
             Follow Aaron
           </p>
           <ul className="flex gap-4 sm:gap-8">
@@ -58,12 +72,12 @@ const AppFooter = () => {
             ))}
           </ul>
         </div>
-        <div className="font-general-regular mx-44 flex flex-col items-center justify-center sm:mx-44">
-          <p className="z-55 mb-5 text-3xl text-primary-dark  sm:text-4xl">
+        <div className="font-general-regular mx-44 flex flex-col items-center justify-center sm:mx-44 mt-8">
+          <p className="z-55 mb-5 text-3xl text-expansion-orange  sm:text-4xl whitespace-nowrap">
             Follow Nicola
           </p>
           <ul className="flex gap-4 sm:gap-8">
-            {socialLinks.map((link) => (
+            {nicolasLinks.map((link) => (
               // eslint-disable-next-line react/jsx-key
               <motion.div whileHover={{ scale: 1.8 }}>
                 <a

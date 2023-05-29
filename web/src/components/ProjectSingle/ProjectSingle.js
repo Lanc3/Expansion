@@ -42,13 +42,13 @@ const ProjectSingle = ({ data }) => {
         }}
         whileHover={{ scale: 0.8 }}
         onClick={openModal}
-        className="min-h-min rounded-xl rounded-t-xl"
+        className=" rounded-xl rounded-t-xl"
       >
         <div>
-          <div className="mb-10 min-h-max cursor-pointer rounded-xl rounded-t-xl bg-secondary-light shadow-lg hover:shadow-xl sm:mb-0">
+          <div className="min-flex-shrink-0 mb-10 cursor-pointer rounded-xl rounded-t-xl bg-secondary-light shadow-lg hover:shadow-xl sm:mb-0">
             <div className="justify-center rounded-xl rounded-t-xl">
               {video ? (
-                <div className="flex h-96 rounded-xl rounded-t-xl border-none">
+                <div className="flex h-96 rounded-xl rounded-t-xl border-none object-scale-down">
                   <ReactPlayer
                     controls={false}
                     loop={true}
@@ -59,10 +59,10 @@ const ProjectSingle = ({ data }) => {
                   ></ReactPlayer>
                 </div>
               ) : (
-                <div className="flex w-full justify-center rounded-xl rounded-t-xl">
+                <div className="flex w-full justify-center rounded-xl rounded-t-xl object-scale-down">
                   <img
                     src={image}
-                    className="flex h-96 justify-center rounded-xl rounded-t-xl border-none pl-2"
+                    className="flex h-96 justify-center rounded-xl rounded-t-xl border-none pl-2 object-scale-down"
                     alt="Single Project"
                   />
                 </div>

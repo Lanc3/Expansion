@@ -119,7 +119,7 @@ const AboutPage = () => {
         duration: 0.5,
         delay: 0.1,
       }}
-      className="flex flex-col justify-center "
+      className="flex flex-col justify-center mx-2"
     >
       <MetaTags title="About" description="About page" />
 
