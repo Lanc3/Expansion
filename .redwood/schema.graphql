@@ -1,0 +1,179 @@
+"""
+Use to check whether or not a user is authenticated and is associated
+with an optional set of roles.
+"""
+directive @requireAuth(roles: [String]) on FIELD_DEFINITION
+
+"""Use to skip authentication checks and allow public access."""
+directive @skipAuth on FIELD_DEFINITION
+
+scalar BigInt
+
+input CreateNicolaPostInput {
+  body: String!
+  title: String!
+}
+
+input CreatePostInput {
+  body: String!
+  title: String!
+}
+
+input CreateProjectDataInput {
+  body: String!
+  by: String!
+  category: String!
+  clientName: String!
+  clientWebsite: String!
+  image: String!
+  objective: String!
+  title: String!
+  tools: String!
+  video: String!
+}
+
+input CreateProjectInput {
+  body: String!
+  category: String!
+  clientName: String!
+  clientWebsite: String!
+  image: String!
+  objective: String!
+  title: String!
+  tools: String!
+  video: String!
+}
+
+scalar Date
+
+scalar DateTime
+
+scalar JSON
+
+scalar JSONObject
+
+type Mutation {
+  createNicolaPost(input: CreateNicolaPostInput!): NicolaPost!
+  createPost(input: CreatePostInput!): Post!
+  createProject(input: CreateProjectInput!): Project!
+  createProjectData(input: CreateProjectDataInput!): ProjectData!
+  deleteNicolaPost(id: Int!): NicolaPost!
+  deletePost(id: Int!): Post!
+  deleteProject(id: Int!): Project!
+  deleteProjectData(id: Int!): ProjectData!
+  updateNicolaPost(id: Int!, input: UpdateNicolaPostInput!): NicolaPost!
+  updatePost(id: Int!, input: UpdatePostInput!): Post!
+  updateProject(id: Int!, input: UpdateProjectInput!): Project!
+  updateProjectData(id: Int!, input: UpdateProjectDataInput!): ProjectData!
+}
+
+type NicolaPost {
+  body: String!
+  createdAt: DateTime!
+  id: Int!
+  title: String!
+}
+
+type Post {
+  body: String!
+  createdAt: DateTime!
+  id: Int!
+  title: String!
+}
+
+type Project {
+  body: String!
+  category: String!
+  clientName: String!
+  clientWebsite: String!
+  createdAt: DateTime!
+  id: Int!
+  image: String!
+  objective: String!
+  title: String!
+  tools: String!
+  video: String!
+}
+
+type ProjectData {
+  body: String!
+  by: String!
+  category: String!
+  clientName: String!
+  clientWebsite: String!
+  createdAt: DateTime!
+  id: Int!
+  image: String!
+  objective: String!
+  title: String!
+  tools: String!
+  video: String!
+}
+
+"""About the Redwood queries."""
+type Query {
+  nicolaPost(id: Int!): NicolaPost
+  nicolaPosts: [NicolaPost!]!
+  post(id: Int!): Post
+  posts: [Post!]!
+  project(id: Int!): Project
+  projectData(id: Int!): ProjectData
+  projectDatas: [ProjectData!]!
+  projects: [Project!]!
+
+  """Fetches the Redwood root schema."""
+  redwood: Redwood
+}
+
+"""
+The RedwoodJS Root Schema
+
+Defines details about RedwoodJS such as the current user and version information.
+"""
+type Redwood {
+  """The current user."""
+  currentUser: JSON
+
+  """The version of Prisma."""
+  prismaVersion: String
+
+  """The version of Redwood."""
+  version: String
+}
+
+scalar Time
+
+input UpdateNicolaPostInput {
+  body: String
+  title: String
+}
+
+input UpdatePostInput {
+  body: String
+  title: String
+}
+
+input UpdateProjectDataInput {
+  body: String
+  by: String
+  category: String
+  clientName: String
+  clientWebsite: String
+  image: String
+  objective: String
+  title: String
+  tools: String
+  video: String
+}
+
+input UpdateProjectInput {
+  body: String
+  category: String
+  clientName: String
+  clientWebsite: String
+  image: String
+  objective: String
+  title: String
+  tools: String
+  video: String
+}
