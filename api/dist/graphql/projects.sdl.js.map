@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/graphql/projects.sdl.js"],
+  "sourcesContent": ["export const schema = gql`\n  type Project {\n    id: Int!\n    title: String!\n    category: String!\n    createdAt: DateTime!\n    image: String!\n    video: String!\n    clientName: String!\n    clientWebsite: String!\n    objective: String!\n    tools: String!\n    body: String!\n  }\n\n  type Query {\n    projects: [Project!]! @requireAuth\n    project(id: Int!): Project @requireAuth\n  }\n\n  input CreateProjectInput {\n    title: String!\n    category: String!\n    image: String!\n    video: String!\n    clientName: String!\n    clientWebsite: String!\n    objective: String!\n    tools: String!\n    body: String!\n  }\n\n  input UpdateProjectInput {\n    title: String\n    category: String\n    image: String\n    video: String\n    clientName: String\n    clientWebsite: String\n    objective: String\n    tools: String\n    body: String\n  }\n\n  type Mutation {\n    createProject(input: CreateProjectInput!): Project! @requireAuth\n    updateProject(id: Int!, input: UpdateProjectInput!): Project! @requireAuth\n    deleteProject(id: Int!): Project! @requireAuth\n  }\n`\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;yBAAyB;AAAlB,MAAMA,SAASC,mBAAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "names": ["schema", "gql"]
+}
