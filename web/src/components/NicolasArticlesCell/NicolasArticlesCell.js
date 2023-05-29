@@ -8,8 +8,13 @@ export const QUERY = gql`
     }
   }
 `
+import AnimatedLoading from '../AnimatedLoading/AnimatedLoading'
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => (
+  <div>
+    <AnimatedLoading />
+  </div>
+)
 
 export const Empty = () => <div>Empty</div>
 

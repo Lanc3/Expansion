@@ -59,15 +59,15 @@ const AnimatedLogo = () => {
   }
 
   return (
-    <div className="example">
+    <div className="example flex w-full justify-center">
       <h2>{'AnimatedLogo'}</h2>
 
       <motion.svg
-        height="256"
-        width="256"
+        height="300"
+        width="300"
         fill="none"
         stroke="currentColor"
-        viewBox="0 0 562.03 508.038"
+        viewBox="0 0 542.03 488.038"
         xmlns="http://www.w3.org/2000/svg"
       >
         <motion.path

@@ -1,3 +1,4 @@
+import AnimatedLoading from '../AnimatedLoading/AnimatedLoading'
 export const QUERY = gql`
   query FindProjectDatas {
     project: projectDatas {
@@ -16,7 +17,11 @@ export const QUERY = gql`
     }
   }
 `
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => (
+  <div>
+    <AnimatedLoading />
+  </div>
+)
 
 export const Empty = () => <div>Empty</div>
 
