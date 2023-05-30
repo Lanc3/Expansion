@@ -16,6 +16,10 @@ import NicolaPostEditNicolaPostPageType from '/home/aaron/Desktop/Redwood Expani
 import NicolaPostNewNicolaPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/NicolaPost/NewNicolaPostPage/NewNicolaPostPage'
 import NicolaPostNicolaPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/NicolaPost/NicolaPostPage/NicolaPostPage'
 import NicolaPostNicolaPostsPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/NicolaPost/NicolaPostsPage/NicolaPostsPage'
+import NicolaPost (copy)EditNicolaPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/NicolaPost (copy)/EditNicolaPostPage/EditNicolaPostPage'
+import NicolaPost (copy)NewNicolaPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/NicolaPost (copy)/NewNicolaPostPage/NewNicolaPostPage'
+import NicolaPost (copy)NicolaPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/NicolaPost (copy)/NicolaPostPage/NicolaPostPage'
+import NicolaPost (copy)NicolaPostsPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/NicolaPost (copy)/NicolaPostsPage/NicolaPostsPage'
 import PostEditPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/Post/EditPostPage/EditPostPage'
 import PostNewPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/Post/NewPostPage/NewPostPage'
 import PostPostPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/Post/PostPage/PostPage'
@@ -43,6 +47,10 @@ declare global {
   const NicolaPostNewNicolaPostPage: typeof NicolaPostNewNicolaPostPageType
   const NicolaPostNicolaPostPage: typeof NicolaPostNicolaPostPageType
   const NicolaPostNicolaPostsPage: typeof NicolaPostNicolaPostsPageType
+  const NicolaPost (copy)EditNicolaPostPage: typeof NicolaPost (copy)EditNicolaPostPageType
+  const NicolaPost (copy)NewNicolaPostPage: typeof NicolaPost (copy)NewNicolaPostPageType
+  const NicolaPost (copy)NicolaPostPage: typeof NicolaPost (copy)NicolaPostPageType
+  const NicolaPost (copy)NicolaPostsPage: typeof NicolaPost (copy)NicolaPostsPageType
   const PostEditPostPage: typeof PostEditPostPageType
   const PostNewPostPage: typeof PostNewPostPageType
   const PostPostPage: typeof PostPostPageType

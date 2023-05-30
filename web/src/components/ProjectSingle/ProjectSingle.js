@@ -62,7 +62,7 @@ const ProjectSingle = ({ data }) => {
                 <div className="flex w-full justify-center rounded-xl rounded-t-xl object-scale-down">
                   <img
                     src={image}
-                    className="flex h-96 justify-center rounded-xl rounded-t-xl border-none pl-2 object-scale-down"
+                    className="flex h-96 justify-center rounded-xl rounded-t-xl border-none object-scale-down pl-2"
                     alt="Single Project"
                   />
                 </div>
@@ -82,21 +82,23 @@ const ProjectSingle = ({ data }) => {
       </motion.div>
       <AnimatedPopUpModal isOpen={isOpen} onClose={closeModal}>
         <div className="flex">
-          <div className="flex w-1/3 flex-col">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-10 lg:grid-cols-2">
             <div>
               <p className="font-general-medium mb-2 mt-0 flex  w-full items-center justify-center text-left text-3xl font-bold text-expansion-orange  sm:text-4xl">
                 {title}
               </p>
               <div className="mb-10 flex  justify-center sm:mb-0" key={id}>
                 {video ? (
-                  <div className="flex h-96 rounded-xl rounded-t-xl border-none">
+                  <div className="h-84 flex rounded-xl rounded-t-xl border-none">
                     <ReactPlayer
                       controls={false}
+                      light={false}
                       loop={true}
                       playing={true}
                       volume={0}
                       playbackRate={1}
                       url={video}
+                      width="100%"
                     ></ReactPlayer>
                   </div>
                 ) : (
@@ -108,59 +110,60 @@ const ProjectSingle = ({ data }) => {
                   />
                 )}
               </div>
-            </div>
-            <div className="mb-7 flex flex-col items-center">
-              <p className="font-general-regular mb-2 text-2xl font-semibold text-secondary-dark ">
-                Client
-              </p>
-              <ul className="leading-loose">
-                <li
-                  className="font-general-regular text-ternary-dark "
-                  key={id}
-                >
-                  <a
-                    href={clientWebsite}
-                    className="cursor-pointer duration-300 hover:text-expansion-orange hover:underline "
-                    aria-label="Project Website and Phone"
+              <div className="mb-7 flex flex-col items-center">
+                <p className="font-general-regular mb-2 text-2xl font-semibold text-secondary-dark ">
+                  Client
+                </p>
+                <ul className="leading-loose">
+                  <li
+                    className="font-general-regular text-ternary-dark "
+                    key={id}
                   >
-                    {clientName}
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="mb-7 flex flex-col items-center">
-              <p className="font-general-regular mb-2 text-2xl font-semibold text-ternary-dark ">
-                Our Objectives
-              </p>
-              <p className="font-general-regular text-primary-dark ">
-                {objective}
-              </p>
-            </div>
+                    <a
+                      href={clientWebsite}
+                      className="cursor-pointer duration-300 hover:text-expansion-orange hover:underline "
+                      aria-label="Project Website and Phone"
+                    >
+                      {clientName}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="mb-7 flex flex-col items-center">
+                <p className="font-general-regular mb-2 text-2xl font-semibold text-ternary-dark ">
+                  Our Objectives
+                </p>
+                <p className="font-general-regular text-primary-dark ">
+                  {objective}
+                </p>
+              </div>
 
-            {/* Single project technologies */}
-            <div className="mb-7 flex flex-col items-center">
-              <p className="font-general-regular mb-2 text-2xl font-semibold text-ternary-dark ">
-                Tools and Technologies
-              </p>
-              <p className="font-general-regular text-primary-dark ">{tools}</p>
+              {/* Single project technologies */}
+              <div className="mb-7 flex flex-col items-center">
+                <p className="font-general-regular mb-2 text-2xl font-semibold text-ternary-dark ">
+                  Tools and Technologies
+                </p>
+                <p className="font-general-regular text-primary-dark ">
+                  {tools}
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div className="mt-4 flex w-2/3">
-            {/*  Single project right section */}
-            <div className=" ml-44   text-left ">
-              <p className="font-general-regular text-2xl font-bold text-primary-dark ">
-                {title}
-              </p>
-              {paragraphs.map((section) => (
-                // eslint-disable-next-line react/jsx-key
-                <div className="display-linebreak">
-                  {' '}
-                  <p className="font-general-regular mb-8 text-primary-dark ">
-                    {section}
-                  </p>{' '}
-                </div>
-              ))}
+            <div className="mt-4 flex ">
+              {/*  Single project right section */}
+              <div className="text-left ">
+                <p className="font-general-regular text-2xl font-bold text-primary-dark ">
+                  {title}
+                </p>
+                {paragraphs.map((section) => (
+                  // eslint-disable-next-line react/jsx-key
+                  <div className="display-linebreak">
+                    {' '}
+                    <p className="font-general-regular mb-8 text-primary-dark ">
+                      {section}
+                    </p>{' '}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -25,13 +25,18 @@ model User {
   resetToken          String?
   resetTokenExpiresAt DateTime?
   roles               String    @default("client")
+  Imaeg String?
 }
+
+
 
 model Post {
   id        Int      @id @default(autoincrement())
   title     String
   body      String
   createdAt DateTime @default(now())
+  likeAmount Int @default(0)
+  Image String?
 }
 
 model NicolaPost {
@@ -39,6 +44,8 @@ model NicolaPost {
   title     String
   body      String
   createdAt DateTime @default(now())
+  likeAmount Int @default(0)
+  Image String?
 }
 
 model ProjectData {

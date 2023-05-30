@@ -49,11 +49,19 @@ const Post = ({ post }) => {
             </tr>
             <tr>
               <th>Body</th>
-              <td className="flex h-28 break-normal">{post.body}</td>
+              <td>{post.body}</td>
             </tr>
             <tr>
               <th>Created at</th>
               <td>{timeTag(post.createdAt)}</td>
+            </tr>
+            <tr>
+              <th>Like amount</th>
+              <td>{post.likeAmount}</td>
+            </tr>
+            <tr>
+              <th>Image</th>
+              <td>{post.Image}</td>
             </tr>
           </tbody>
         </table>

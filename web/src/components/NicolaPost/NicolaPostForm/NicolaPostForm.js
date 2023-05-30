@@ -4,6 +4,7 @@ import {
   FieldError,
   Label,
   TextField,
+  NumberField,
   Submit,
   TextAreaField,
 } from '@redwoodjs/forms'
@@ -58,6 +59,41 @@ const NicolaPostForm = (props) => {
         />
 
         <FieldError name="body" className="rw-field-error" />
+
+        <Label
+          name="likeAmount"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Like amount
+        </Label>
+
+        <NumberField
+          name="likeAmount"
+          defaultValue={props.nicolaPost?.likeAmount}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+
+        <FieldError name="likeAmount" className="rw-field-error" />
+
+        <Label
+          name="Image"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Image
+        </Label>
+
+        <TextField
+          name="Image"
+          defaultValue={props.nicolaPost?.Image}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="Image" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

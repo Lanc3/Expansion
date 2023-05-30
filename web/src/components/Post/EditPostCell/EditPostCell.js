@@ -12,6 +12,8 @@ export const QUERY = gql`
       title
       body
       createdAt
+      likeAmount
+      Image
     }
   }
 `
@@ -22,6 +24,8 @@ const UPDATE_POST_MUTATION = gql`
       title
       body
       createdAt
+      likeAmount
+      Image
     }
   }
 `

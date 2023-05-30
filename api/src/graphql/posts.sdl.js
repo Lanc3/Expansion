@@ -4,6 +4,8 @@ export const schema = gql`
     title: String!
     body: String!
     createdAt: DateTime!
+    likeAmount: Int!
+    Image: String
   }
 
   type Query {
@@ -14,11 +16,15 @@ export const schema = gql`
   input CreatePostInput {
     title: String!
     body: String!
+    likeAmount: Int!
+    Image: String
   }
 
   input UpdatePostInput {
     title: String
     body: String
+    likeAmount: Int
+    Image: String
   }
 
   type Mutation {

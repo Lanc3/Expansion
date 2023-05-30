@@ -5,6 +5,7 @@ export const QUERY = gql`
       title
       body
       createdAt
+      likeAmount
     }
   }
 `
@@ -21,14 +22,11 @@ export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error.message}</div>
 )
 
-import ArticleItem from '../ArticleItem/ArticleItem'
+import ArticleList from '../ArticleList/ArticleList'
 export const Success = ({ articles }) => {
   return (
     <div className="">
-      {articles.map((article) => (
-        // eslint-disable-next-line react/jsx-key
-        <ArticleItem article={article} />
-      ))}
+      <ArticleList articles={articles} />
     </div>
   )
 }

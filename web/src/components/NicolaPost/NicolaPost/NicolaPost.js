@@ -55,6 +55,14 @@ const NicolaPost = ({ nicolaPost }) => {
               <th>Created at</th>
               <td>{timeTag(nicolaPost.createdAt)}</td>
             </tr>
+            <tr>
+              <th>Like amount</th>
+              <td>{nicolaPost.likeAmount}</td>
+            </tr>
+            <tr>
+              <th>Image</th>
+              <td>{nicolaPost.Image}</td>
+            </tr>
           </tbody>
         </table>
       </div>

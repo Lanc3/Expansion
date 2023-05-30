@@ -9,6 +9,8 @@ export const QUERY = gql`
       title
       body
       createdAt
+      likeAmount
+      Image
     }
   }
 `

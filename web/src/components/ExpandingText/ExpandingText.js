@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 
-import { motion, AnimatePresence } from 'framer-motion'
-
+import { motion, AnimatePresence, useCycle } from 'framer-motion'
+import { Player, Controls } from '@lottiefiles/react-lottie-player'
+import animation from './upAnimation.json'
 import ExpansionButton from '../ExpansionButton/ExpansionButton'
-const ExpandingText = ({ data }) => {
+const ExpandingText = ({ data, toggleCallback }) => {
   const [expanded, setExpanded] = useState(false)
   const paragraphs = data.body.split('\n')
   const toggleExpand = () => {
     setExpanded(!expanded)
+    toggleCallback(!expanded)
   }
-
+  const [height, cycleHeight] = useCycle(0, 50, 100)
   const renderText = () => {
     if (expanded) {
       return data.body
@@ -22,11 +24,25 @@ const ExpandingText = ({ data }) => {
   }
   return (
     <div className="article">
+      {expanded ? (
+        <div
+          className="-mt-20 mb-8 flex w-full justify-end"
+          onClick={toggleExpand}
+        >
+          <Player
+            autoplay
+            speed={1.5}
+            loop
+            src={animation}
+            style={{ height: '80px', width: ' 80px' }}
+          ></Player>
+        </div>
+      ) : null}
       <AnimatePresence>
         {!expanded ? (
           <div className="display-linebreak">
             {' '}
-            <p className="font-general-regular mb-8 text-primary-dark ">
+            <p className="font-general-regular mb-8 text-white ">
               {renderText()}
             </p>{' '}
           </div>
@@ -43,7 +59,7 @@ const ExpandingText = ({ data }) => {
               // eslint-disable-next-line react/jsx-key
               <div className="display-linebreak">
                 {' '}
-                <p className="font-general-regular mb-8 text-primary-dark ">
+                <p className="font-general-regular mb-8 text-white ">
                   {section}
                 </p>{' '}
               </div>

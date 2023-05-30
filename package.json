@@ -24,6 +24,7 @@
   },
   "packageManager": "yarn@3.4.1",
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "framer-motion": "^6.5.1",
     "react-countup": "^6.4.2",
     "react-icons": "^4.8.0",

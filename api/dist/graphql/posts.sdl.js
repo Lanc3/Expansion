@@ -37,6 +37,8 @@ const schema = import_graphql_tag.default`
     title: String!
     body: String!
     createdAt: DateTime!
+    likeAmount: Int!
+    Image: String
   }
 
   type Query {
@@ -47,11 +49,15 @@ const schema = import_graphql_tag.default`
   input CreatePostInput {
     title: String!
     body: String!
+    likeAmount: Int!
+    Image: String
   }
 
   input UpdatePostInput {
     title: String
     body: String
+    likeAmount: Int
+    Image: String
   }
 
   type Mutation {

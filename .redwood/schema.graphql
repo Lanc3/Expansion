@@ -10,12 +10,16 @@ directive @skipAuth on FIELD_DEFINITION
 scalar BigInt
 
 input CreateNicolaPostInput {
+  Image: String
   body: String!
+  likeAmount: Int!
   title: String!
 }
 
 input CreatePostInput {
+  Image: String
   body: String!
+  likeAmount: Int!
   title: String!
 }
 
@@ -68,16 +72,20 @@ type Mutation {
 }
 
 type NicolaPost {
+  Image: String
   body: String!
   createdAt: DateTime!
   id: Int!
+  likeAmount: Int!
   title: String!
 }
 
 type Post {
+  Image: String
   body: String!
   createdAt: DateTime!
   id: Int!
+  likeAmount: Int!
   title: String!
 }
 
@@ -144,12 +152,16 @@ type Redwood {
 scalar Time
 
 input UpdateNicolaPostInput {
+  Image: String
   body: String
+  likeAmount: Int
   title: String
 }
 
 input UpdatePostInput {
+  Image: String
   body: String
+  likeAmount: Int
   title: String
 }
 

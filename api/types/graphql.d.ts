@@ -38,12 +38,16 @@ export type Scalars = {
 };
 
 export type CreateNicolaPostInput = {
+  Image?: InputMaybe<Scalars['String']>;
   body: Scalars['String'];
+  likeAmount: Scalars['Int'];
   title: Scalars['String'];
 };
 
 export type CreatePostInput = {
+  Image?: InputMaybe<Scalars['String']>;
   body: Scalars['String'];
+  likeAmount: Scalars['Int'];
   title: Scalars['String'];
 };
 
@@ -154,17 +158,21 @@ export type MutationupdateProjectDataArgs = {
 
 export type NicolaPost = {
   __typename?: 'NicolaPost';
+  Image?: Maybe<Scalars['String']>;
   body: Scalars['String'];
   createdAt: Scalars['DateTime'];
   id: Scalars['Int'];
+  likeAmount: Scalars['Int'];
   title: Scalars['String'];
 };
 
 export type Post = {
   __typename?: 'Post';
+  Image?: Maybe<Scalars['String']>;
   body: Scalars['String'];
   createdAt: Scalars['DateTime'];
   id: Scalars['Int'];
+  likeAmount: Scalars['Int'];
   title: Scalars['String'];
 };
 
@@ -254,12 +262,16 @@ export type Redwood = {
 };
 
 export type UpdateNicolaPostInput = {
+  Image?: InputMaybe<Scalars['String']>;
   body?: InputMaybe<Scalars['String']>;
+  likeAmount?: InputMaybe<Scalars['Int']>;
   title?: InputMaybe<Scalars['String']>;
 };
 
 export type UpdatePostInput = {
+  Image?: InputMaybe<Scalars['String']>;
   body?: InputMaybe<Scalars['String']>;
+  likeAmount?: InputMaybe<Scalars['Int']>;
   title?: InputMaybe<Scalars['String']>;
 };
 
@@ -465,33 +477,41 @@ export type MutationRelationResolvers<ContextType = RedwoodGraphQLContext, Paren
 };
 
 export type NicolaPostResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['NicolaPost'] = ResolversParentTypes['NicolaPost']> = {
+  Image: OptArgsResolverFn<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   body: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   createdAt: OptArgsResolverFn<ResolversTypes['DateTime'], ParentType, ContextType>;
   id: OptArgsResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
+  likeAmount: OptArgsResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
   title: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type NicolaPostRelationResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['NicolaPost'] = ResolversParentTypes['NicolaPost']> = {
+  Image?: RequiredResolverFn<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   body?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   createdAt?: RequiredResolverFn<ResolversTypes['DateTime'], ParentType, ContextType>;
   id?: RequiredResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
+  likeAmount?: RequiredResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
   title?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type PostResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Post'] = ResolversParentTypes['Post']> = {
+  Image: OptArgsResolverFn<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   body: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   createdAt: OptArgsResolverFn<ResolversTypes['DateTime'], ParentType, ContextType>;
   id: OptArgsResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
+  likeAmount: OptArgsResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
   title: OptArgsResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type PostRelationResolvers<ContextType = RedwoodGraphQLContext, ParentType extends ResolversParentTypes['Post'] = ResolversParentTypes['Post']> = {
+  Image?: RequiredResolverFn<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   body?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   createdAt?: RequiredResolverFn<ResolversTypes['DateTime'], ParentType, ContextType>;
   id?: RequiredResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
+  likeAmount?: RequiredResolverFn<ResolversTypes['Int'], ParentType, ContextType>;
   title?: RequiredResolverFn<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
