@@ -21,6 +21,8 @@ declare module '@redwoodjs/router' {
     client: (params?: RouteParams<"/client"> & QueryParams) => "/client"
     blogAdmin: (params?: RouteParams<"/blog-admin"> & QueryParams) => "/blog-admin"
     developer: (params?: RouteParams<"/developer"> & QueryParams) => "/developer"
+    nicolasArticle: (params?: RouteParams<"/nicolas-article/{id:Int}"> & QueryParams) => "/nicolas-article/{id:Int}"
+    aaronsArticle: (params?: RouteParams<"/aarons-article/{id:Int}"> & QueryParams) => "/aarons-article/{id:Int}"
     signup: (params?: RouteParams<"/signup"> & QueryParams) => "/signup"
     contactus: (params?: RouteParams<"/contactus"> & QueryParams) => "/contactus"
     home: (params?: RouteParams<"/"> & QueryParams) => "/"

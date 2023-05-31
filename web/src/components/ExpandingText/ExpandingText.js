@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 
-import { motion, AnimatePresence, useCycle } from 'framer-motion'
 import { Player, Controls } from '@lottiefiles/react-lottie-player'
-import animation from './upAnimation.json'
+
+import { motion, AnimatePresence, useCycle } from 'framer-motion'
+
+import { Link, routes } from '@redwoodjs/router'
+
 import ExpansionButton from '../ExpansionButton/ExpansionButton'
-const ExpandingText = ({ data, toggleCallback }) => {
+
+import animation from './upAnimation.json'
+const ExpandingText = ({ data, toggleCallback, notAaron }) => {
   const [expanded, setExpanded] = useState(false)
   const paragraphs = data.body.split('\n')
   const toggleExpand = () => {
@@ -67,11 +72,25 @@ const ExpandingText = ({ data, toggleCallback }) => {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-row items-center justify-center">
         {expanded ? (
           <ExpansionButton lable={'Collapse'} onClickCallback={toggleExpand} />
         ) : (
-          <ExpansionButton lable={'Read More'} onClickCallback={toggleExpand} />
+          <div className="flex flex-row">
+            <ExpansionButton
+              lable={'Quick View'}
+              onClickCallback={toggleExpand}
+            />
+            {!notAaron ? (
+              <Link to={routes.aaronsArticle({ id: data.id })}>
+                <ExpansionButton lable={'Full Article'} />
+              </Link>
+            ) : (
+              <Link to={routes.nicolasArticle({ id: data.id })}>
+                <ExpansionButton lable={'Full Article'} />
+              </Link>
+            )}
+          </div>
         )}
       </div>
     </div>

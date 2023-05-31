@@ -40,6 +40,8 @@ const Routes = () => {
       </Set>
       <Set wrap={HeaderFooterLayout}>
         <Private unauthenticated="home"></Private>
+        <Route path="/nicolas-article/{id:Int}" page={NicolasArticlePage} name="nicolasArticle" />
+        <Route path="/aarons-article/{id:Int}" page={AaronsArticlePage} name="aaronsArticle" />
         <Route path="/signup" page={SignupPage} name="signup" />
         <Route path="/contactus" page={ContactusPage} name="contactus" />
         <Route path="/" page={HomePage} name="home" />

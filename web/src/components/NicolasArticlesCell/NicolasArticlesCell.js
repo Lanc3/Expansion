@@ -27,7 +27,7 @@ export const Success = ({ articles }) => {
     <ul>
       {articles.map((article) => (
         // eslint-disable-next-line react/jsx-key
-        <ArticleItem article={article} />
+        <ArticleItem article={article} notAaron={true} />
       ))}
     </ul>
   )
