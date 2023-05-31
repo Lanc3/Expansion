@@ -1,6 +1,6 @@
 import { Prisma } from "@prisma/client"
 import { MergePrismaWithSdlTypes, MakeRelationsOptional } from '@redwoodjs/api'
-import { User as PrismaUser, Post as PrismaPost, NicolaPost as PrismaNicolaPost, ProjectData as PrismaProjectData } from '@prisma/client'
+import { User as PrismaUser, Post as PrismaPost, NicolaPost as PrismaNicolaPost, ProjectData as PrismaProjectData, Comment as PrismaComment } from '@prisma/client'
 import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
 import { RedwoodGraphQLContext } from '@redwoodjs/graphql-server/dist/functions/types';
 export type Maybe<T> = T | null;

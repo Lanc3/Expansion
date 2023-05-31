@@ -12,7 +12,7 @@ import logoLight from './logoText.png'
 import logoDark from './logoText.png'
 
 const HeaderFooterLayout = ({ children }) => {
-  const { isAuthenticated, currentUser, logOut } = useAuth()
+  const { isAuthenticated, hasRole, currentUser, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
 
   function toggleMenu() {
@@ -106,7 +106,7 @@ const HeaderFooterLayout = ({ children }) => {
             >
               Nicola's Blog
             </Link>
-            {isAuthenticated ? (
+            {hasRole('admin') && (
               <Link
                 to={routes.blogAdmin()}
                 onClick={toggleMenu}
@@ -114,7 +114,7 @@ const HeaderFooterLayout = ({ children }) => {
               >
                 Admin
               </Link>
-            ) : null}
+            )}
             {isAuthenticated ? (
               <div>
                 <button
@@ -204,14 +204,14 @@ const HeaderFooterLayout = ({ children }) => {
               </div>
             </div>
 
-            {isAuthenticated ? (
+            {hasRole('admin') && (
               <Link
                 to={routes.blogAdmin()}
-                className="mb-2 block shrink-0 border-t-2 border-primary-light pt-3 text-left text-lg text-primary-dark  hover:text-[#F97E19]   sm:mx-4 sm:border-t-0 sm:py-2 sm:pt-2"
+                className="mb-2 block border-t-2 border-primary-light pt-3 text-left text-lg text-primary-dark  hover:text-[#F97E19]   sm:mx-4 sm:border-t-0 sm:py-2 sm:pt-2"
               >
                 Admin
               </Link>
-            ) : null}
+            )}
             {isAuthenticated ? (
               <div>
                 <button
