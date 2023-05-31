@@ -43,7 +43,7 @@ const schema = import_graphql_tag.default`
 
   type Query {
     posts: [Post!]! @skipAuth
-    post(id: Int!): Post @requireAuth
+    post(id: Int!): Post @skipAuth
   }
 
   input CreatePostInput {

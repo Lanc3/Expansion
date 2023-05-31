@@ -9,8 +9,8 @@ export const schema = gql`
   }
 
   type Query {
-    nicolaPosts: [NicolaPost!]! @requireAuth
-    nicolaPost(id: Int!): NicolaPost @requireAuth
+    nicolaPosts: [NicolaPost!]! @skipAuth
+    nicolaPost(id: Int!): NicolaPost @skipAuth
   }
 
   input CreateNicolaPostInput {
