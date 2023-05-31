@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/graphql/mutations/updatePostLikes.js"],
-  "sourcesContent": ["// api/src/graphql/mutations/updatePostLikes.js\n\nimport { db } from 'src/lib/db'\n\nexport const updatePostLikes = async ({ id }) => {\n  const post = await db.post.update({\n    where: { id },\n    data: {\n      likeAmount: {\n        increment: 1,\n      },\n    },\n  })\n\n  return post\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;AAAA;;;;;AAEA,gBAAW;AAEJ,MAAMA,kBAAkB,OAAO;EAAEC;AAAG,MAAM;AAC/C,QAAMC,OAAO,MAAMC,aAAGD,KAAKE,OAAO;IAChCC,OAAO;MAAEJ;IAAG;IACZK,MAAM;MACJC,YAAY;QACVC,WAAW;MACb;IACF;EACF,CAAC;AAED,SAAON;AACT;",
-  "names": ["updatePostLikes", "id", "post", "db", "update", "where", "data", "likeAmount", "increment"]
-}

@@ -4,6 +4,7 @@ import AboutPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/sr
 import BlogAdminPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/BlogAdminPage/BlogAdminPage'
 import ClientPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/ClientPage/ClientPage'
 import ContactusPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/ContactusPage/ContactusPage'
+import DeveloperPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/DeveloperPage/DeveloperPage'
 import FatalErrorPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/FatalErrorPage/FatalErrorPage'
 import ForgotPasswordPageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/ForgotPasswordPage/ForgotPasswordPage'
 import HomePageType from '/home/aaron/Desktop/Redwood Expanion/Expansion/web/src/pages/HomePage/HomePage'
@@ -31,6 +32,7 @@ declare global {
   const BlogAdminPage: typeof BlogAdminPageType
   const ClientPage: typeof ClientPageType
   const ContactusPage: typeof ContactusPageType
+  const DeveloperPage: typeof DeveloperPageType
   const FatalErrorPage: typeof FatalErrorPageType
   const ForgotPasswordPage: typeof ForgotPasswordPageType
   const HomePage: typeof HomePageType

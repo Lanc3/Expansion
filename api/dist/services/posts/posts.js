@@ -21,8 +21,7 @@ __export(posts_exports, {
   deletePost: () => deletePost,
   post: () => post,
   posts: () => posts,
-  updatePost: () => updatePost,
-  updatePostLikes: () => updatePostLikes
+  updatePost: () => updatePost
 });
 module.exports = __toCommonJS(posts_exports);
 var import_db = require("../../lib/db");
@@ -56,17 +55,6 @@ const updatePost = ({
     }
   });
 };
-const updatePostLikes = ({
-  id,
-  input
-}) => {
-  return import_db.db.post.update({
-    data: input,
-    where: {
-      id
-    }
-  });
-};
 const deletePost = ({
   id
 }) => {
@@ -82,7 +70,6 @@ const deletePost = ({
   deletePost,
   post,
   posts,
-  updatePost,
-  updatePostLikes
+  updatePost
 });
 //# sourceMappingURL=posts.js.map

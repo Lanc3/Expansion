@@ -65,7 +65,6 @@ type Mutation {
   deletePost(id: Int!): Post!
   deleteProject(id: Int!): Project!
   deleteProjectData(id: Int!): ProjectData!
-  updateLike(id: Int!, input: UpdatePostLikesInput!): Post!
   updateNicolaPost(id: Int!, input: UpdateNicolaPostInput!): NicolaPost!
   updatePost(id: Int!, input: UpdatePostInput!): Post!
   updateProject(id: Int!, input: UpdateProjectInput!): Project!
@@ -164,10 +163,6 @@ input UpdatePostInput {
   body: String
   likeAmount: Int
   title: String
-}
-
-input UpdatePostLikesInput {
-  likeAmount: Int
 }
 
 input UpdateProjectDataInput {

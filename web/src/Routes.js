@@ -34,6 +34,7 @@ const Routes = () => {
             <Route path="/project-datas" page={ProjectDataProjectDatasPage} name="projectDatas" />
             <Route path="/client" page={ClientPage} name="client" />
             <Route path="/blog-admin" page={BlogAdminPage} name="blogAdmin" />
+            <Route path="/developer" page={DeveloperPage} name="developer" />
           </Set>
         </Private>
       </Set>
