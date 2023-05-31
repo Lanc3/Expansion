@@ -86,6 +86,7 @@ export type Mutation = {
   deletePost: Post;
   deleteProject: Project;
   deleteProjectData: ProjectData;
+  updateLike: Post;
   updateNicolaPost: NicolaPost;
   updatePost: Post;
   updateProject: Project;
@@ -130,6 +131,12 @@ export type MutationdeleteProjectArgs = {
 
 export type MutationdeleteProjectDataArgs = {
   id: Scalars['Int'];
+};
+
+
+export type MutationupdateLikeArgs = {
+  id: Scalars['Int'];
+  input: UpdatePostLikesInput;
 };
 
 
@@ -275,6 +282,10 @@ export type UpdatePostInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
+export type UpdatePostLikesInput = {
+  likeAmount?: InputMaybe<Scalars['Int']>;
+};
+
 export type UpdateProjectDataInput = {
   body?: InputMaybe<Scalars['String']>;
   by?: InputMaybe<Scalars['String']>;
@@ -384,6 +395,7 @@ export type ResolversTypes = {
   Time: ResolverTypeWrapper<Scalars['Time']>;
   UpdateNicolaPostInput: UpdateNicolaPostInput;
   UpdatePostInput: UpdatePostInput;
+  UpdatePostLikesInput: UpdatePostLikesInput;
   UpdateProjectDataInput: UpdateProjectDataInput;
   UpdateProjectInput: UpdateProjectInput;
 };
@@ -412,6 +424,7 @@ export type ResolversParentTypes = {
   Time: Scalars['Time'];
   UpdateNicolaPostInput: UpdateNicolaPostInput;
   UpdatePostInput: UpdatePostInput;
+  UpdatePostLikesInput: UpdatePostLikesInput;
   UpdateProjectDataInput: UpdateProjectDataInput;
   UpdateProjectInput: UpdateProjectInput;
 };
@@ -455,6 +468,7 @@ export type MutationResolvers<ContextType = RedwoodGraphQLContext, ParentType ex
   deletePost: Resolver<ResolversTypes['Post'], ParentType, ContextType, RequireFields<MutationdeletePostArgs, 'id'>>;
   deleteProject: Resolver<ResolversTypes['Project'], ParentType, ContextType, RequireFields<MutationdeleteProjectArgs, 'id'>>;
   deleteProjectData: Resolver<ResolversTypes['ProjectData'], ParentType, ContextType, RequireFields<MutationdeleteProjectDataArgs, 'id'>>;
+  updateLike: Resolver<ResolversTypes['Post'], ParentType, ContextType, RequireFields<MutationupdateLikeArgs, 'id' | 'input'>>;
   updateNicolaPost: Resolver<ResolversTypes['NicolaPost'], ParentType, ContextType, RequireFields<MutationupdateNicolaPostArgs, 'id' | 'input'>>;
   updatePost: Resolver<ResolversTypes['Post'], ParentType, ContextType, RequireFields<MutationupdatePostArgs, 'id' | 'input'>>;
   updateProject: Resolver<ResolversTypes['Project'], ParentType, ContextType, RequireFields<MutationupdateProjectArgs, 'id' | 'input'>>;
@@ -470,6 +484,7 @@ export type MutationRelationResolvers<ContextType = RedwoodGraphQLContext, Paren
   deletePost?: RequiredResolverFn<ResolversTypes['Post'], ParentType, ContextType, RequireFields<MutationdeletePostArgs, 'id'>>;
   deleteProject?: RequiredResolverFn<ResolversTypes['Project'], ParentType, ContextType, RequireFields<MutationdeleteProjectArgs, 'id'>>;
   deleteProjectData?: RequiredResolverFn<ResolversTypes['ProjectData'], ParentType, ContextType, RequireFields<MutationdeleteProjectDataArgs, 'id'>>;
+  updateLike?: RequiredResolverFn<ResolversTypes['Post'], ParentType, ContextType, RequireFields<MutationupdateLikeArgs, 'id' | 'input'>>;
   updateNicolaPost?: RequiredResolverFn<ResolversTypes['NicolaPost'], ParentType, ContextType, RequireFields<MutationupdateNicolaPostArgs, 'id' | 'input'>>;
   updatePost?: RequiredResolverFn<ResolversTypes['Post'], ParentType, ContextType, RequireFields<MutationupdatePostArgs, 'id' | 'input'>>;
   updateProject?: RequiredResolverFn<ResolversTypes['Project'], ParentType, ContextType, RequireFields<MutationupdateProjectArgs, 'id' | 'input'>>;

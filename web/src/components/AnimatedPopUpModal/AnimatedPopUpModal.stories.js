@@ -10,9 +10,15 @@
 // See https://storybook.js.org/docs/react/writing-stories/args.
 
 import AnimatedPopUpModal from './AnimatedPopUpModal'
-
+const child = () => {
+  return (
+    <div>
+      <p>test</p>
+    </div>
+  )
+}
 export const generated = () => {
-  return <AnimatedPopUpModal />
+  return <AnimatedPopUpModal isOpen={true} children={child} />
 }
 
 export default {

@@ -12,7 +12,24 @@
 import ProjectSingle from './ProjectSingle'
 
 export const generated = () => {
-  return <ProjectSingle />
+  return (
+    <ProjectSingle
+      data={{
+        id: 1,
+        title: 'test',
+        category: 'test',
+        createdAt: 'test',
+        image: 'test',
+        video: 'test',
+        clientName: 'test',
+        clientWebsite: 'test',
+        objective: 'test',
+        tools: 'test',
+        body: 'test',
+        by: 'test',
+      }}
+    />
+  )
 }
 
 export default {

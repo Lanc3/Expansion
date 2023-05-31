@@ -3,7 +3,7 @@ import { FiClock, FiTag } from 'react-icons/fi'
 import { useState } from 'react'
 
 import ExpandingText from '../ExpandingText/ExpandingText'
-import LikeButtonCell from '../LikeButtonCell'
+import LikeButton from '../LikeButton'
 const ArticleItem = ({ article }) => {
   const [show, setShow] = useState(false)
   const toggleIcon = (value) => {

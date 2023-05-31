@@ -22,6 +22,12 @@ export const updatePost = ({ id, input }) => {
     where: { id },
   })
 }
+export const updatePostLikes = ({ id, input }) => {
+  return db.post.update({
+    data: input,
+    where: { id },
+  })
+}
 
 export const deletePost = ({ id }) => {
   return db.post.delete({

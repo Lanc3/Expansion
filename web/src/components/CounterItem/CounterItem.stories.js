@@ -12,7 +12,13 @@
 import CounterItem from './CounterItem'
 
 export const generated = () => {
-  return <CounterItem />
+  return (
+    <CounterItem
+      title="Combined Years of experience"
+      counter={<span id="experienceCounter" />}
+      measurement=""
+    />
+  )
 }
 
 export default {

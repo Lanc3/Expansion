@@ -12,7 +12,7 @@
 import ExpansionButton from './ExpansionButton'
 
 export const generated = () => {
-  return <ExpansionButton />
+  return <ExpansionButton lable={'TEst'} />
 }
 
 export default {

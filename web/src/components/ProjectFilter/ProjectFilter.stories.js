@@ -10,9 +10,24 @@
 // See https://storybook.js.org/docs/react/writing-stories/args.
 
 import ProjectFilter from './ProjectFilter'
-
+const projects = [
+  {
+    id: 1,
+    title: 'test',
+    category: 'test',
+    createdAt: 'test',
+    image: 'test',
+    video: 'test',
+    clientName: 'test',
+    clientWebsite: 'test',
+    objective: 'test',
+    tools: 'test',
+    body: 'test',
+    by: 'test',
+  },
+]
 export const generated = () => {
-  return <ProjectFilter />
+  return <ProjectFilter projects={projects} />
 }
 
 export default {

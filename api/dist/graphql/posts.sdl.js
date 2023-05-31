@@ -59,11 +59,15 @@ const schema = import_graphql_tag.default`
     likeAmount: Int
     Image: String
   }
+  input UpdatePostLikesInput {
+    likeAmount: Int
+  }
 
   type Mutation {
     createPost(input: CreatePostInput!): Post! @requireAuth
     updatePost(id: Int!, input: UpdatePostInput!): Post! @requireAuth
     deletePost(id: Int!): Post! @requireAuth
+    updateLike(id: Int!, input: UpdatePostLikesInput!): Post! @requireAuth
   }
 `;
 // Annotate the CommonJS export names for ESM import in node:
